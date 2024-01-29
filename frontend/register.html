@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration</h1>
+        <form id="registerForm" enctype="multipart/form-data">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="serviceCategory">Service Category:</label>
+            <select id="serviceCategory" name="serviceCategory" required>
+                <option value="category1">Category 1</option>
+                <option value="category2">Category 2</option>
+                <option value="category3">Category 3</option>
+            </select>
+
+            <label for="serviceDescription">Service Description:</label>
+            <textarea id="serviceDescription" name="serviceDescription" rows="4" required></textarea>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

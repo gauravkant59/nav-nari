@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Service - Nav-Naari</title>
+    <!-- Add your CSS stylesheets and other meta tags here -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url("img/2a6588b127d0c8917c8d1092a9b77def.jpg"); /* Replace with actual path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            color: #271212;
+        }
+
+        header {
+            background-color: #343a40;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        input,
+        textarea,
+        select {
+            width: calc(100% - 20px); /* Adjusting width to accommodate padding */
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%; /* Full width for select elements */
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Empowering Women Through Services</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="text-center mb-5">Post Your Service</h2>
+            <form id="postServiceForm" action="/submit-service" method="post">
+                <!-- Personal Information -->
+                <label for="providerName">Full Name:</label>
+                <input type="text" id="providerName" name="providerName" required>
+
+
+                <!-- Contact Information -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+
+                <label for="location">Address (Location):</label>
+                <input type="text" id="location" name="location" required>
+
+                <!-- Service Details -->
+                <label for="serviceCategory">Service Category:</label>
+                <select id="serviceCategory" name="serviceCategory" required>
+                    <option value="category1">Category 1</option>
+                    <option value="category2">Category 2</option>
+                    <option value="category3">Category 3</option>
+                </select>
+
+                <label for="serviceDescription">Service Description:</label>
+                <textarea id="serviceDescription" name="serviceDescription" rows="4" required></textarea>
+
+                <small>(Upload a profile picture)</small>
+                <label for="profilePicture">Profile Picture:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+                
+
+                <!-- Terms and Conditions -->
+                <label for="agreeTerms">Agree to Nav-Naari terms and conditions:</label>
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
+
